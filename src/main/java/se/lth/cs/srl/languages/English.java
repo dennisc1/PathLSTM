@@ -11,6 +11,7 @@ import se.lth.cs.srl.corpus.Word;
 import se.lth.cs.srl.options.FullPipelineOptions;
 import se.lth.cs.srl.preprocessor.tokenization.StanfordPTBTokenizer;
 import se.lth.cs.srl.preprocessor.tokenization.Tokenizer;
+import se.lth.cs.srl.preprocessor.tokenization.WhiteSpaceTokenizer;
 import se.lth.cs.srl.util.FileExistenceVerifier;
 
 public class English extends Language {
@@ -92,7 +93,7 @@ public class English extends Language {
 	}
 
 	Tokenizer getDefaultTokenizer() {
-		return new StanfordPTBTokenizer();
+		return new WhiteSpaceTokenizer();
 	}
 
 	@Override
